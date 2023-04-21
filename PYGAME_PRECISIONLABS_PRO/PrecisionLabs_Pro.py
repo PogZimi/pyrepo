@@ -3,7 +3,7 @@ MIT License
 
 PogZimi , dealtwixyn@gmail.com
 
-Copyright (c) [Enter the year(s) of copyright]
+Copyright (c) 2023
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
