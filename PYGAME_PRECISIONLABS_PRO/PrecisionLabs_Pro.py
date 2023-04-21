@@ -12,8 +12,6 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-[Enter the conditions of the license, if any]
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -49,7 +47,7 @@ CIRCLES = 6
 CIRCLE_COLOR = (22, 255, 2)
 RADIUS = 25 
 COORDINATES = []
-DESPAWN_SEC = 0.8
+DESPAWN_SEC = 1
 CIRCLE_OBJECT = []
 POINTS = 0
 SCORE_ = pygame.font.SysFont('algerian', 20)
@@ -74,8 +72,6 @@ def generate_random_coordinates(cord):
             
             sample = [x_fac, y_fac]
             cord.append(sample)
-
-        print(cord)
 
 # Generates random coordinates for 1 Circle 
 def rand_cord():
