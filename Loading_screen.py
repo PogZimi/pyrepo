@@ -19,13 +19,6 @@ lower_big = pygame.Rect(left_small.x , left_small.y + left_small.height, (right_
 
 WHITE_REC_LOADER = pygame.Rect(left_small.x + left_small.width , left_small.y , 30, left_small.height+1)
 
-def generate_random_num():
-    random_num = random.randint(1, 4)
-    if(random_num < 3):
-         return True 
-    elif(random_num > 2):
-         return False 
-
 def increment():
     random_num = random.randint(32, 46)
     time.sleep(1)
@@ -50,7 +43,6 @@ while run:
             run = False 
     increment()
     var = upper_big.width - left_small.width - 25
-    # WHITE_REC_LOADER.width == var or WHITE_REC_LOADER.width < var and WHITE_REC_LOADER.width > var-6 
     if(WHITE_REC_LOADER.width > var):
             run = False
     o.update_screen()
