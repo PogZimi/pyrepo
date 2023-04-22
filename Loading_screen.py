@@ -17,11 +17,16 @@ upper_big = pygame.Rect(left_small.x , left_small.y - 3, (right_small.x - left_s
 lower_big = pygame.Rect(left_small.x , left_small.y + left_small.height, (right_small.x - left_small.x + 2) , 4 )
 
 WHITE_REC_LOADER = pygame.Rect(left_small.x + left_small.width , left_small.y , 30, left_small.height+1)
+var = (upper_big.width - left_small.width) - 10
 
 def increment():
-    random_num = random.randint(32, 44)
+    global var 
+    random_num = random.randint(32, 41)
     time.sleep(DELAY)
-    WHITE_REC_LOADER.width = WHITE_REC_LOADER.width + random_num
+    if(WHITE_REC_LOADER.width + random_num < var):
+       WHITE_REC_LOADER.width = WHITE_REC_LOADER.width + random_num
+    else: 
+       WHITE_REC_LOADER.width = WHITE_REC_LOADER.width + 9
 
 class LOADING_SCREEN:
     def update_screen(self):
@@ -41,7 +46,7 @@ while run:
         if event.type == pygame.QUIT:
             run = False 
     increment()
-    var = upper_big.width - left_small.width - (left_small.h+4)
+    var = (upper_big.width - left_small.width) - 34
     if(WHITE_REC_LOADER.width > var):
             run = False
     o.update_screen()
