@@ -17,7 +17,7 @@ upper_big = pygame.Rect(left_small.x , left_small.y - 3, (right_small.x - left_s
 lower_big = pygame.Rect(left_small.x , left_small.y + left_small.height, (right_small.x - left_small.x + 2) , 4 )
 
 WHITE_REC_LOADER = pygame.Rect(left_small.x + left_small.width , left_small.y , 30, left_small.height+1)
-var = (upper_big.width - left_small.width) - 10
+var = (upper_big.width - left_small.width) - 17
 
 def increment():
     global var 
