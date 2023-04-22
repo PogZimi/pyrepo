@@ -42,7 +42,6 @@ while run:
             run = False 
     increment()
     var = upper_big.width - left_small.width - (left_small.h+4)
-    # WHITE_REC_LOADER.width == var or WHITE_REC_LOADER.width < var and WHITE_REC_LOADER.width > var-6 
     if(WHITE_REC_LOADER.width > var):
             run = False
     o.update_screen()
