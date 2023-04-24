@@ -8,6 +8,7 @@ height = 900
 window = pygame.display.set_mode((width, height))
 pygame.display.set_caption('LOADING_SCREEN')
 BOOL_VAL = None
+WHITE = (255,255,255)
 DELAY = 1 
 
 left_small = pygame.Rect(width//2 - 200, width//2 + 65, 2, 25)
@@ -31,11 +32,11 @@ def increment():
 class LOADING_SCREEN:
     def update_screen(self):
         window.fill((0,0,0))
-        pygame.draw.rect(window, (255,255,255), left_small)
-        pygame.draw.rect(window, (255,255,255), right_small)
-        pygame.draw.rect(window, (255,255,255), upper_big)
-        pygame.draw.rect(window, (255,255,255), lower_big)
-        pygame.draw.rect(window, (255,255,255), WHITE_REC_LOADER)
+        pygame.draw.rect(window, WHITE, left_small)
+        pygame.draw.rect(window, WHITE, right_small)
+        pygame.draw.rect(window, WHITE, upper_big)
+        pygame.draw.rect(window, WHITE, lower_big)
+        pygame.draw.rect(window, WHITE, WHITE_REC_LOADER)
         pygame.display.update()
       
 o = LOADING_SCREEN()
@@ -46,7 +47,8 @@ while run:
         if event.type == pygame.QUIT:
             run = False 
     increment()
-    var = (upper_big.width - left_small.width) - 34
-    if(WHITE_REC_LOADER.width > var):
+    var = (upper_big.width - left_small.width) - 27
+    if(WHITE_REC_LOADER.width > var+18):
             run = False
     o.update_screen()
+
