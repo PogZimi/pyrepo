@@ -9,7 +9,7 @@ BG_COLOR = (0, 0, 0)
 
 window = pygame.display.set_mode((w_width, w_height))
 # Loading our image file into pygame 
-sky = pygame.image.load("sky.png")
+sky = pygame.image.load("bsky.png")
 # Resizing the image dimensions
 sky_png = pygame.transform.scale(sky, (w_width, w_height))
 pygame.display.set_caption(w_caption)
