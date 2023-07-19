@@ -1,6 +1,12 @@
 import pygame
 pygame.init()
 
+'''
+To make the background scrolling faster , increase the frame_speed variable 
+For more customization , you can also change the FPS 
+
+'''
+
 w_width = 800
 w_height = 600
 w_caption = ' ScrollingBackGround ! '
@@ -18,7 +24,7 @@ pygame.display.set_caption(w_caption)
 # In this case , we are using 3 Frames for Scrolling Background 
 bg_xcoord = [0, (w_width), (w_width*2)]
 # FRAME SPEED
-frame_speed = 1.2
+frame_speed = 0.5 
 bg_y = 0
 
 class stax:
