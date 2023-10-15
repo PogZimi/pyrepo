@@ -29,6 +29,11 @@ class Translator:
             self.var_int //= 10
             self.size += 1
         self.var_int = self.const_int
+        
+        if self.var_int in roman_numerals and roman_numerals[self.var_int] is not None:
+           self.roman+=roman_numerals[self.var_int]
+           print(self.roman)
+           exit(0)
 
     def decb(self, num_size):
         ten = 1
@@ -82,7 +87,9 @@ class Translator:
                             self.roman += roman_numerals[self.tens[i]]
                 elif (x == 4 or x == 9):
                     self.exception_four_or_nine(x, self.tens[i])
-
+                elif(x==5):
+                    self.roman+= roman_numerals[self.tens[i]*5]
+                
             elif (self.tens[i] == 1):
                 if (self.broken[i] < 4):
                     for f in range(x):
@@ -97,8 +104,6 @@ class Translator:
                 elif (x == 4):
                     self.roman += 'IV'
         return self.roman 
-    
-
 
 obj1 = Translator()
 roman = obj1.break_num()
